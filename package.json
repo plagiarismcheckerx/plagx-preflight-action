@@ -1,0 +1,13 @@
+{
+  "name": "plagx-preflight-action",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GitHub Action: check essays, papers and docs with Plagx Preflight. A free academic writing utility by Plagiarism Checker X.",
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync-lib.js",
+    "test": "node --test"
+  },
+  "author": "Plagiarism Checker X (https://plagiarismcheckerx.com/)",
+  "license": "MIT"
+}

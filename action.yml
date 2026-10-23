@@ -1,0 +1,55 @@
+name: Plagx Preflight Draft Check
+description: Check essays, papers and docs for word count, citations vs. reference list, punctuation and basic grammar.
+author: Plagiarism Checker X
+branding:
+  icon: check-square
+  color: green
+
+inputs:
+  files:
+    description: Text or Markdown files to check (.txt or .md). Separate with spaces or new lines. Wildcards such as docs/**/*.md are allowed.
+    required: true
+  min-words:
+    description: Minimum word count per file (reference list excluded).
+    required: false
+    default: ''
+  max-words:
+    description: Maximum word count per file (reference list excluded).
+    required: false
+    default: ''
+  style:
+    description: Citation style to look for (apa or mla).
+    required: false
+    default: apa
+  checks:
+    description: Comma-separated check groups. Default is all except passive-voice. Options are length, references, punctuation, grammar and passive-voice.
+    required: false
+    default: ''
+  required-headings:
+    description: Headings every file should contain, separated by commas or new lines (e.g. Introduction, Conclusion).
+    required: false
+    default: ''
+  fail-on:
+    description: When the step fails. "error" (e.g. a citation missing from the reference list), "warning" (also warnings) or "never".
+    required: false
+    default: error
+  summary:
+    description: Add stats and suggestions to the job summary.
+    required: false
+    default: 'true'
+
+outputs:
+  files:
+    description: Number of files checked.
+  words:
+    description: Total words in all files (reference lists excluded).
+  errors:
+    description: Number of errors found.
+  warnings:
+    description: Number of warnings found.
+  infos:
+    description: Number of info suggestions.
+
+runs:
+  using: node24
+  main: index.js
