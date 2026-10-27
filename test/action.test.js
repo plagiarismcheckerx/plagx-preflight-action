@@ -61,7 +61,7 @@ test('outputs and job summary', async () => {
   assert.match(r.summary, /## Plagx Preflight draft check/);
   assert.match(r.summary, /\| `docs\/sub\/clean.txt` \| 7 \|/);
   assert.match(r.summary, /<details><summary><code>docs\/essay.md<\/code>/);
-  assert.match(r.summary, /utm_content=plagx-preflight-action/);
+  assert.match(r.summary, /utm_source=plagx-preflight-action/);
 });
 
 test('fail-on never and warning', async () => {

@@ -4,7 +4,7 @@ import { appendFileSync, existsSync, readdirSync, readFileSync } from 'node:fs';
 import { extname, join } from 'node:path';
 import { checkDraft, CHECKS, STYLES } from './lib/index.js';
 
-const PCX = 'https://plagiarismcheckerx.com/?utm_source=github-action&utm_medium=job-summary&utm_campaign=plagx&utm_content=plagx-preflight-action';
+const PCX = 'https://plagiarismcheckerx.com/?utm_source=plagx-preflight-action';
 const MAX_ROWS = 100;
 const LEVEL = { error: 'error', warning: 'warning', info: 'notice' };
 const ICON = { error: '❌', warning: '⚠️', info: 'ℹ️' };
