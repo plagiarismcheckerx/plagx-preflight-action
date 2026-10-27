@@ -1,6 +1,6 @@
 {
   "name": "plagx-preflight-action",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "GitHub Action: check essays, papers and docs with Plagx Preflight. A free academic writing utility by Plagiarism Checker X.",
   "type": "module",
